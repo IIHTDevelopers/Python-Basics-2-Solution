@@ -1,0 +1,24 @@
+
+    Weather Analysis Report
+    ------------------------
+    Temperatures (°C): [29.8, 31.2, 32.5, 34.0, 35.5]
+    Highest Temperature: 35.5
+    Lowest Temperature: 29.8
+    Extreme Temperatures Detected: [29.8, 35.5]
+    
+
+    Weather Analysis Report
+    ------------------------
+    Temperatures (°C): [29.8, 31.2, 32.5, 34.0, 35.5]
+    Highest Temperature: 35.5
+    Lowest Temperature: 29.8
+    Extreme Temperatures Detected: [29.8, 35.5]
+    
+
+    Weather Analysis Report
+    ------------------------
+    Temperatures (°C): [29.8, 31.2, 32.5, 34.0, 35.5]
+    Highest Temperature: 35.5
+    Lowest Temperature: 29.8
+    Extreme Temperatures Detected: [29.8, 35.5]
+    
