@@ -1,35 +1,4 @@
-📊 Weather Analysis Report
-Temperatures (°C): [32.5, 34.0, 31.2, 29.8, 35.5]
-Average Temperature: 32.60
-Highest Temperature: 35.50
-Lowest Temperature: 29.80
-Temperature Standard Deviation: 2.01
-🔥 Extreme Temperatures Detected: [29.8, 35.5]
-----------------------------------------
- Weather Analysis Report
-Temperatures (°C): [32.5, 34.0, 31.2, 29.8, 35.5]
-Average Temperature: 32.60
-Highest Temperature: 35.50
-Lowest Temperature: 29.80
-Temperature Standard Deviation: 2.01
- Extreme Temperatures Detected: [29.8, 35.5]
-----------------------------------------
- Weather Analysis Report
-Temperatures (°C): [32.5, 34.0, 31.2, 29.8, 35.5]
-Average Temperature: 32.60
-Highest Temperature: 35.50
-Lowest Temperature: 29.80
-Temperature Standard Deviation: 2.01
- Extreme Temperatures Detected: [29.8, 35.5]
-----------------------------------------
- Weather Analysis Report
-Temperatures (°C): [32.5, 34.0, 31.2, 29.8, 35.5]
-Average Temperature: 32.60
-Highest Temperature: 35.50
-Lowest Temperature: 29.80
-Temperature Standard Deviation: 2.01
- Extreme Temperatures Detected: [29.8, 35.5]
-----------------------------------------
+
 
     Weather Analysis Report
     ------------------------
