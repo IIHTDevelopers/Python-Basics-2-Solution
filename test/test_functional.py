@@ -171,27 +171,47 @@ import os
 # Adjusting the path to import TestUtils and WeatherAnalysis
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from test.TestUtils import TestUtils
+from WeatherAnalysis import (
+    weather_analysis,
+)
 
 class TestWeatherAnalysis(unittest.TestCase):
     def setUp(self):
         self.test_obj = TestUtils()
         self.real_filename = "weather_report.txt"
-        # ⚡ NO calling weather_analysis() or save_report_to_file() here anymore
-        # Only reading the already existing file
+        self.temperatures = {32.5, 34.0, 31.2, 29.8, 35.5}
 
-        # Prepare the expected parts (based on real temperatures used)
+        # Expected values to match
         self.expected_sorted_temps = "[29.8, 31.2, 32.5, 34.0, 35.5]"
         self.expected_max_temp = "35.5"
         self.expected_min_temp = "29.8"
         self.expected_extreme_temps = "[29.8, 35.5]"
 
+    def test_weather_analysis(self):
+        try:
+            # Test the FUNCTION OUTPUT directly
+            report = weather_analysis(self.temperatures)
+
+            result = (
+                f"Temperatures (°C): {self.expected_sorted_temps}" in report and
+                f"Highest Temperature: {self.expected_max_temp}" in report and
+                f"Lowest Temperature: {self.expected_min_temp}" in report and
+                f"Extreme Temperatures Detected: {self.expected_extreme_temps}" in report
+            )
+
+            self.test_obj.yakshaAssert("TestWeatherAnalysis", result, "functional")
+            print(f"TestWeatherAnalysis = {'Passed' if result else 'Failed'}")
+        except Exception as e:
+            self.test_obj.yakshaAssert("TestWeatherAnalysis", False, "functional")
+            print(f"TestWeatherAnalysis = Failed | Exception: {e}")
+
     def test_check_real_weather_report(self):
         try:
+            # Test the FILE CONTENT
             if os.path.exists(self.real_filename):
                 with open(self.real_filename, "r", encoding="utf-8") as file:
                     content = file.read()
 
-                    # Check expected parts
                     result = (
                         f"Temperatures (°C): {self.expected_sorted_temps}" in content and
                         f"Highest Temperature: {self.expected_max_temp}" in content and
@@ -210,4 +230,3 @@ class TestWeatherAnalysis(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
